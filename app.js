@@ -33,6 +33,8 @@ connectDatabase();
 // Set up body parser
 app.use(bodyParser.urlencoded({extended : true}));
 
+app.use(express.static('public'));
+
 // Importing all routes
 const jobs = require('./routes/jobs');
 const auth = require('./routes/auth');
